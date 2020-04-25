@@ -17,6 +17,7 @@ class GameItem extends Component {
             <div className="box">
             <Card>
                 <CardHeader
+                    url={this.props.data.url}
                     title={this.props.data.title}
                     subtitle={this.props.data.platform}
                     releaseyear={this.props.data.release_year}
@@ -24,7 +25,9 @@ class GameItem extends Component {
                     showExpandableButton={false}
                 />
                 <CardText>
-                    <strong>Rating: {this.props.data.score} / 10</strong>
+                    <strong>Score: {this.props.data.score}</strong><br></br>
+                    <strong>{this.props.data.release_year}</strong><br></br>
+                    <em>URL: "{this.props.data.url}"</em>
                     <div>
                         {this.props.data.genre !== '' && genrelist}
                         {this.props.data.editors_choice === 'Y' && <Chip style={{margin: '5% 0 5% 0'}}><Avatar size={32}>E</Avatar>Editors Choice</Chip> }

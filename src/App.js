@@ -30,7 +30,6 @@ class App extends Component {
 
                   // Examine the text in the response
                   response.json().then(function (data) {
-                      data.shift();
                       self.setState({
                           apiData: data,
                           games: data
